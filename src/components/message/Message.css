@@ -1,0 +1,23 @@
+.prevRoom{
+    display: flex;
+    align-items: center;
+    margin: 15px;
+}
+
+.prevRoom img{
+    width: 36px;
+    height: 36px;
+}
+
+.prevRoom__info{
+    margin-left: 15px;
+}
+
+.prevRoom_name{
+    font-size: 24px;
+}
+
+.prevRoom_message{
+    font-size: 18px;
+    opacity: 0.7;
+}

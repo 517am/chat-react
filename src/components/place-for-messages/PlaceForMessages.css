@@ -1,0 +1,150 @@
+.PlaceForMessages {
+    width: 70%;
+    position: relative;
+    box-shadow: 0px 0px 25px -6px rgba(255, 255, 255, 0.23);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.companion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333e48;
+    border-radius: 15px 15px 0 0;
+    -webkit-border-radius: 15px 15px 0 0;
+    -moz-border-radius: 15px 15px 0 0;
+    -ms-border-radius: 15px 15px 0 0;
+    -o-border-radius: 15px 15px 0 0;
+}
+
+.companion__info {
+    display: flex;
+    align-items: center;
+    margin: 10px 20px;
+}
+
+.companion__info a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.messages {
+
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    /* "auto" или "thin" */
+    scrollbar-color: blue orange;
+    /* цвет бегунка и зоны отслеживания */
+}
+
+.messages::-webkit-scrollbar {
+    width: 5px;
+    /* ширина всей полосы прокрутки */
+}
+
+.messages::-webkit-scrollbar-track {
+    background: transparent;
+    /* цвет зоны отслеживания */
+}
+
+.messages::-webkit-scrollbar-thumb {
+    background-color: rgb(149, 1, 1);
+    border-radius: 25px;
+
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+.wrapperForm {
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    display: contents;
+}
+
+form {
+    display: flex;
+}
+
+form input[type="text"] {
+    width: 90%;
+    background: linear-gradient(to right, #333, transparent 90%);
+    border: none;
+    text-indent: 60px;
+    outline: none;
+    border-radius: 0 15px 0 15px;
+    -webkit-border-radius: 0 15px 0 15px;
+    -moz-border-radius: 0 15px 0 15px;
+    -ms-border-radius: 0 15px 0 15px;
+    -o-border-radius: 0 15px 0 15px;
+}
+
+.actions {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    cursor: pointer;
+    line-height: 0;
+    margin-right: 10px;
+}
+
+.actions:hover {
+    box-shadow: 0px 0px 11px -1px rgba(0, 0, 0, 0.23);
+}
+
+.actions::after {
+    content: url("../../assets/icon-dots.png");
+}
+
+.wrapperForm button {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.wrapperForm button::before {
+    content: url("../../assets/icon-send-hover.png");
+    position: absolute;
+    width: 0px;
+    right: 12%;
+    opacity: 0;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.wrapperForm button:hover::before {
+    right: 69px;
+    opacity: 1;
+}
+
+.wrapperForm button::after {
+    content: url("../../assets/icon-send.png");
+}
